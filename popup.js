@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contentDiv = document.getElementById('content');
 
     // Check if API key is already saved
-    chrome.storage.local.get('apiKey', function(result) {
+    browser.storage.local.get('apiKey').then(result => {
         if (result.apiKey) {
             // API key exists, show main content
             setupDiv.classList.add('d-none');
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     saveKeyButton.addEventListener('click', function() {
         const apiKey = apiKeyInput.value.trim();
         if (apiKey) {
-            chrome.storage.local.set({ apiKey: apiKey }, function() {
+            browser.storage.local.set({ apiKey: apiKey }).then(() => {
                 alert('API key saved!');
                 setupDiv.classList.add('d-none');
                 contentDiv.classList.remove('d-none');
@@ -62,7 +62,7 @@ function scrubInput(input) {
 // Function to retrieve API key from storage
 function getApiKey() {
     return new Promise((resolve, reject) => {
-        chrome.storage.local.get('apiKey', function(result) {
+        browser.storage.local.get('apiKey').then(result => {
             if (result.apiKey) {
                 resolve(result.apiKey);
             } else {
