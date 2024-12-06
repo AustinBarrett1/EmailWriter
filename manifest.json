@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Text Processor",
+    "version": "1.0",
+    "description": "Input text and get it processed with ChatGPT API for grammar correction, text elaboration, or summarization.",
+    "permissions": ["activeTab", "storage"],
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net; object-src 'self';",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "icons/icon.png"
+        }
+    },
+    "icons": {
+        "48": "icons/icon.png"
+    }
+}
