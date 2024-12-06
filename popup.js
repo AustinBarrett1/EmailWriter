@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Process button event
     document.getElementById('processButton').addEventListener('click', async() => {
-        const inputText = document.getElementById('inputText').value.trim();
+        // Scrub the input text before processing
+        let inputText = scrubInput(document.getElementById('inputText').value);
         const action = document.getElementById('action').value;
 
         if (inputText === "") {
@@ -50,6 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Function to scrub user input by removing special characters and trimming
+function scrubInput(input) {
+    // Remove special characters (basic example)
+    const sanitizedInput = input.replace(/[<>]/g, "").trim();
+    return sanitizedInput;
+}
 
 // Function to retrieve API key from storage
 function getApiKey() {
