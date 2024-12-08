@@ -5,6 +5,7 @@ A Firefox extension that leverages the ChatGPT API to assist users in processing
 ## Installation
 
 1. Clone the repository:
+
    ```sh
    git clone <repository-url>
    ```
@@ -18,8 +19,10 @@ A Firefox extension that leverages the ChatGPT API to assist users in processing
 ## Usage
 
 1. **Set Up API Key**:
+
    - Open the extension by clicking on the extension icon in your Firefox toolbar.
-   - Enter your API key to enable ChatGPT functionality and click "Save API Key".
+   - Enter your ChatGPT API key to enable functionality and click "Save API Key".
+   - **Note:** You must have your own API key to use this extension. Obtain an API key from OpenAI if you don’t already have one.
 
 2. **Text Processing**:
    - Once the API key is set, you can start processing text.
@@ -30,9 +33,11 @@ A Firefox extension that leverages the ChatGPT API to assist users in processing
 ## Development
 
 ### Running the Extension Temporarily
+
 This extension can be loaded temporarily into Firefox for testing purposes by following the steps in the "Installation" section. Any changes made to the code will require reloading the extension from `about:debugging`.
 
 ### Folder Structure
+
 - `manifest.json`: Extension manifest file that defines its properties and permissions.
 - `background.js`: Background script for handling extension logic.
 - `popup.html`: The HTML file for the popup UI.
@@ -40,10 +45,9 @@ This extension can be loaded temporarily into Firefox for testing purposes by fo
 - `styles.css`: Styling for the popup.
 
 ## Contributing
+
 Contributions are welcome! If you would like to contribute, please fork the repository, create a new branch, and submit a pull request. Feel free to open issues for any bugs or feature requests.
 
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
-
