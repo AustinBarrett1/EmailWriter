@@ -7,7 +7,7 @@ A Firefox extension that leverages the ChatGPT API to assist users in processing
 1. Clone the repository:
 
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/AustinBarrett1/TextFix-Extention.git
    ```
 
 2. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
