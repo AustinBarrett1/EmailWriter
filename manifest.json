@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Input text and get it processed with ChatGPT API for grammar correction, text elaboration, or summarization.",
     "permissions": ["activeTab", "storage"],
-    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net; object-src 'self';",
+    "content_security_policy": "script-src 'self'; object-src 'self';",
     "background": {
         "scripts": ["background.js"],
         "persistent": false
